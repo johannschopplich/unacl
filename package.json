@@ -1,0 +1,57 @@
+{
+  "name": "unacl",
+  "version": "0.0.0",
+  "description": "Minimal, type-safe and reactive ACL implementation",
+  "keywords": [
+    "access-control",
+    "acl"
+  ],
+  "homepage": "https://github.com/johannschopplich/unacl#readme",
+  "bugs": {
+    "url": "https://github.com/johannschopplich/unacl/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johannschopplich/unacl.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Johann Schopplich",
+    "email": "pkg@johannschopplich.com",
+    "url": "https://johannschopplich.com"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "stub": "unbuild --stub",
+    "test": "vitest",
+    "lint": "eslint \"src/**/*.ts\"",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "release": "bumpp package.json --commit --push --tag"
+  },
+  "dependencies": {
+    "@vue/reactivity": "^3.2.31"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "@typescript-eslint/parser": "^5.13.0",
+    "bumpp": "^7.1.1",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.4.0",
+    "prettier": "^2.5.1",
+    "typescript": "~4.5",
+    "unbuild": "^0.6.9",
+    "vitest": "^0.5.9"
+  }
+}
