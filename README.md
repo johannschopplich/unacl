@@ -1,8 +1,8 @@
-# UnACL
+# unacl
 
 > Minimal, type-safe and reactive ACL implementation.
 
-This library doesn't replace a full-featured ACL system, like [CASL](https://github.com/stalniy/casl/). It rather serves an easy-to-use JavaScript accompaniment to the likes of the [Spatie Laravel Permissions](https://github.com/spatie/laravel-permission) package.
+This library doesn't replace a full-featured ACL system, like [CASL](https://github.com/stalniy/casl/). It rather serves a lightweight base for simple access control requirements, like SPAs.
 
 `unacl` utilizes [@vue/reactivity](https://www.npmjs.com/package/@vue/reactivity) under the hood. Thus, you can pair it with Vue in an instant.
 
