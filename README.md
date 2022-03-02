@@ -9,7 +9,6 @@ This library doesn't replace a full-featured ACL system, like [CASL](https://git
 ## Key Features
 
 - 🧩 Reactive `roles` and `permissions` sets
-- 🚏 Many helpers like `can`, `hasEveryRole` etc.
 - 🙆‍♂️ Including checks, like `can`, `is`, `hasEveryRole`
 - 🙅‍♀️ Excluding checks, like `missesSomePermissions`
 - 🪶 About 100 loc
