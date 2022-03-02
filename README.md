@@ -4,11 +4,22 @@
 
 This library doesn't replace a full-featured ACL system, like [CASL](https://github.com/stalniy/casl/). It rather serves a lightweight base for simple access control requirements, like SPAs.
 
-`unacl` utilizes [@vue/reactivity](https://www.npmjs.com/package/@vue/reactivity) under the hood. Thus, you can pair it with Vue in an instant.
+`unacl` utilizes [@vue/reactivity](https://www.npmjs.com/package/@vue/reactivity) under the hood and wraps `roles` and `persmissions` into reactive sets. Thus, you can pair it with Vue in an instant. Of course, you don't have to.
+
+## Key Features
+
+- 🧩 Reactive `roles` and `permissions` sets
+- 🚏 Many helpers like `can`, `hasEveryRole` etc.
+- 🙆‍♂️ Including checks, like `can`, `is`, `hasEveryRole`
+- 🙅‍♀️ Excluding checks, like `missesSomePermissions`
+- 🪶 About 100 loc
+
+## Example
 
 ```ts
 import { ACL } from "unacl";
 
+// Setup the acl instance
 const acl = new ACL({
   permissions: ["read"],
   roles: ["admin", "editor"],
@@ -20,6 +31,7 @@ if (acl.can("archive")) {
   console.log("You are not allowed to archive this entity");
 }
 
+// Change permissions, say after sign in
 if (acl.has("admin")) {
   acl.addPermissions(["create", "update", "delete"]);
 } else {
