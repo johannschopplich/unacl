@@ -16,26 +16,25 @@ This library doesn't replace a full-featured ACL system, like [CASL](https://git
 ## Example
 
 ```ts
-import { ACL } from "unacl";
+import { ACL } from 'unacl'
 
 // Setup the acl instance
 const acl = new ACL({
-  permissions: ["read"],
-  roles: ["admin", "editor"],
-});
+  permissions: ['read'],
+  roles: ['admin', 'editor'],
+})
 
-const isEditor = acl.is("editor"); // `true`
+const isEditor = acl.is('editor') // `true`
 
-if (acl.can("archive")) {
-  console.log("You are not allowed to archive this entity");
-}
+if (acl.can('archive'))
+  console.log('You are not allowed to archive this entity')
 
 // Change permissions, say after sign in
-if (acl.has("admin")) {
-  acl.addPermissions(["create", "update", "delete"]);
-} else {
-  acl.addPermissions(["update"]);
-}
+if (acl.has('admin'))
+  acl.addPermissions(['create', 'update', 'delete'])
+else
+  acl.addPermissions(['update'])
+
 ```
 
 ## Installation
@@ -50,8 +49,8 @@ pnpm install unacl # or npm or yarn
 
 ```ts
 interface AclConfig<T = string, U = string> {
-  roles?: Array<T>;
-  permissions?: Array<U>;
+  roles?: Array<T>
+  permissions?: Array<U>
 }
 ```
 

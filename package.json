@@ -1,57 +1,62 @@
 {
   "name": "unacl",
+  "type": "module",
   "version": "0.1.0",
+  "packageManager": "pnpm@7.5.1",
   "description": "Minimal, type-safe and reactive ACL implementation",
-  "keywords": [
-    "access-control",
-    "acl"
-  ],
-  "homepage": "https://github.com/johannschopplich/unacl#readme",
-  "bugs": {
-    "url": "https://github.com/johannschopplich/unacl/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/johannschopplich/unacl.git"
-  },
-  "license": "MIT",
   "author": {
     "name": "Johann Schopplich",
     "email": "pkg@johannschopplich.com",
     "url": "https://johannschopplich.com"
   },
+  "license": "MIT",
+  "homepage": "https://github.com/johannschopplich/unacl#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johannschopplich/unacl.git"
+  },
+  "bugs": {
+    "url": "https://github.com/johannschopplich/unacl/issues"
+  },
+  "keywords": [
+    "access-control",
+    "acl",
+    "roles",
+    "permissions",
+    "reactive"
+  ],
+  "sideEffects": false,
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
     }
   },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "unbuild",
-    "stub": "unbuild --stub",
+    "dev": "unbuild --stub",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "release": "bumpp --commit --push --tag",
     "test": "vitest",
-    "lint": "eslint \"src/**/*.ts\"",
-    "lint:fix": "npm run lint -- --fix",
-    "format": "prettier --write \"src/**/*.ts\"",
-    "release": "bumpp package.json --commit --push --tag"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@vue/reactivity": "^3.2.31"
+    "@vue/reactivity": "^3"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.13.0",
-    "@typescript-eslint/parser": "^5.13.0",
-    "bumpp": "^7.1.1",
-    "eslint": "^8.10.0",
-    "eslint-config-prettier": "^8.4.0",
-    "prettier": "^2.5.1",
-    "typescript": "^4.6.2",
-    "unbuild": "^0.6.9",
-    "vitest": "^0.5.9"
+    "@antfu/eslint-config": "^0.25.2",
+    "bumpp": "^8.2.1",
+    "eslint": "^8.19.0",
+    "typescript": "^4.7.4",
+    "unbuild": "^0.7.4",
+    "vitest": "^0.18.0"
   }
 }
