@@ -34,7 +34,6 @@ if (acl.has('admin'))
   acl.addPermissions(['create', 'update', 'delete'])
 else
   acl.addPermissions(['update'])
-
 ```
 
 ## Installation
