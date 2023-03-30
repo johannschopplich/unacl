@@ -85,6 +85,6 @@ There are also a number of methods you can leverage on the `ACL` instance:
 
 ## License
 
-[MIT](./LICENSE) License © 2022 [Johann Schopplich](https://github.com/johannschopplich)
+[MIT](./LICENSE) License © 2022-present [Johann Schopplich](https://github.com/johannschopplich)
 
 [MIT](./LICENSE) License © 2019 [Karl Davies](https://github.com/fullstackfool)
