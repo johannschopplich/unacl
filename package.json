@@ -2,7 +2,7 @@
   "name": "unacl",
   "type": "module",
   "version": "0.2.1",
-  "packageManager": "pnpm@8.1.0",
+  "packageManager": "pnpm@8.3.0",
   "description": "Minimal, type-safe and reactive ACL implementation",
   "author": {
     "name": "Johann Schopplich",
@@ -50,11 +50,11 @@
     "@vue/reactivity": "^3.2.47"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.38.0",
+    "@antfu/eslint-config": "^0.38.5",
     "bumpp": "^9.1.0",
-    "eslint": "^8.37.0",
-    "typescript": "^5.0.2",
-    "unbuild": "^1.1.2",
-    "vitest": "^0.29.8"
+    "eslint": "^8.38.0",
+    "typescript": "^5.0.4",
+    "unbuild": "^1.2.1",
+    "vitest": "^0.30.1"
   }
 }
